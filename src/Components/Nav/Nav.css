@@ -1,0 +1,39 @@
+.nav-container{
+    width:100vw;
+    position: fixed;
+    bottom: 0;
+    background-color: #f89a4d;
+   
+}
+
+.nav-icon{
+    width:3em;
+    padding:1em;
+    filter:invert(100%) sepia(0%) saturate(7500%) hue-rotate(312deg) brightness(101%) contrast(100%);
+
+}
+.browse-icon{
+    width:3em;
+    padding:1.5em 1em 1em 1em;
+    filter:invert(100%) sepia(0%) saturate(7500%) hue-rotate(312deg) brightness(101%) contrast(100%);
+
+}
+
+.nav-icon:hover{
+    filter: invert(49%) sepia(23%) saturate(0%) hue-rotate(306deg) brightness(97%) contrast(93%);
+}
+.browse-icon:hover{
+    filter: invert(49%) sepia(23%) saturate(0%) hue-rotate(306deg) brightness(97%) contrast(93%);
+}
+.nav-icons{
+    display: flex;
+    flex-wrap: initial;
+    width:100vw;
+    justify-content: space-between;
+}
+
+.links{
+    align-items: center;
+    display: flex;
+    width:100vw;
+}

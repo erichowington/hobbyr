@@ -26,8 +26,6 @@ function App () {
 
     <main>
 
-      <Nav />
-
       <Routes>
 
         <Route path='/' element={<Feed />} />
@@ -43,6 +41,7 @@ function App () {
         <Route path='/createproject' element={<CreateProject />} />
         <Route path='*' element={<h1>Page Not Found</h1>} />
       </Routes>
+      <Nav />
 
     </main>
 
