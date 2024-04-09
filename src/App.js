@@ -35,7 +35,7 @@ function App () {
         <Route path='/signout' element={<SignOut />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/browse' element={<Browse />} />
-        <Route path='/profile' element={<Profile />} />
+        <Route path='/profile/:profileId' element={<Profile />} />
         <Route path='/editprofile/:profileId' element={<EditProfile />} />
         <Route path='/projectdetails/:projectId' element={<ProjectDetails />} />
         <Route path='/editproject/:projectId' element={<EditProject />} />
