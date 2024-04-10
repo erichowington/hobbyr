@@ -21,7 +21,7 @@ function App () {
       <Routes>
         <Route path='/' element={<Feed />} />
         <Route path='/signin' element={<SignIn setUser={setUser} user={user} />} />
-        <Route path='/signout' element={<SignOut />} />
+        <Route path='/signout' element={<SignOut setUser={setUser} user={user} />} />
         <Route path='/signup' element={<SignUp setUser={setUser} user={user} />} />
         <Route path='/browse' element={<Browse />} />
         <Route path='/profile/:profileId' element={<Profile />} />
