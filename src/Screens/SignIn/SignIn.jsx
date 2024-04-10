@@ -52,7 +52,7 @@ const renderError = () => {
     return ( <button type='submit' className={toggleForm}> {form.errorMsg}</button>
     );
   } else {
-    return <button type='submit'>Log In</button>
+    return <button className='signin-button' type='submit'>Log In</button>
   }
   }
 
@@ -61,11 +61,15 @@ const renderError = () => {
 
     return (
         <div className='signin-wrapper'>
+        <div className='siginin-logo-wrapper'>
+          <img className='signin-logo-img'src='https://github.com/erichowington/hobbyr/blob/dev/public/images/hobbyr-logos/hobbyr-logo-orange.png?raw=true'/>
+        </div>
             <div className='signin-container'>
         
                 <form className='signin-form' onSubmit={handleSubmit}>
 
-                    <input type="text"
+                  <div className='signin-user-wrapper'>
+                    <input className='signin-user' type="text"
                         name='username'
                         value={form.username}
                         placeholder='Enter Username'
@@ -73,10 +77,11 @@ const renderError = () => {
                         required
                         autoComplete='off'
                     />
+                  </div>
                     
                   
-                    
-                    <input type="password"
+                  <div className='signin-password-wrapper'>
+                    <input className='signin-password' type="password"
                         name='password'
                         value={form.password}
                         placeholder='Enter Password'
@@ -84,6 +89,7 @@ const renderError = () => {
                         required
                         autoComplete='off'
                     />
+                  </div>
 
                     {renderError()}
                     
