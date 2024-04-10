@@ -1,0 +1,59 @@
+.signup-logo-img{
+    width:26vw;
+    padding:2vh 0 1vh 2vw;
+}
+.signup-wrapper{
+    font-family: "Roboto Mono";
+}
+.signup-container{
+    display: flex;
+    flex-direction:column;
+    width:50vw;
+    margin:10vh auto;
+
+}
+.signup-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Roboto Mono";
+}
+.input, .signup-user{
+    font-family: "Roboto Mono";
+    border: .1em solid rgb(72,72,72);
+    padding: 1em;
+
+}
+.input, .signup-email{
+    font-family: "Roboto Mono";
+    border: .1em solid rgb(72, 72, 72);
+    padding:1em;
+}
+.input, .signup-password{
+    font-family: "Roboto Mono";
+    border: .1em solid rgb(72, 72, 72);
+    padding:1em;
+}
+.signup-user-wrapper{
+    padding:1vh 0 0 0;
+    
+}
+.signup-email-wrapper{
+    padding:1vh 0 0 0;
+}
+.signup-password-wrapper{
+    padding:1vh 0 1vh 0;
+}
+.signup-button{
+    width:fit-content;
+    padding:1vh 3vh;
+    margin: 0 auto;
+    border:none;
+    border-radius: 1vh;
+    font-family: "Roboto Mono";
+    font-weight: 500;
+}
+.signup-button:hover{
+    background-color: rgb(98, 98, 189);
+    color:whitesmoke;
+}

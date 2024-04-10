@@ -4,11 +4,13 @@
 }
 .signin-wrapper{
     font-family: "Roboto Mono";
+    width:100vw;
 }
+
 .signin-container{
     display: flex;
     flex-direction:column;
-    width:50vw;
+    width:100vw;
     margin:10vh auto;
 
 }
@@ -48,4 +50,15 @@
 .signin-button:hover{
     background-color: rgb(98, 98, 189);
     color:whitesmoke;
+}
+.link-sign-in{
+    text-decoration: none;
+    font-weight:400;
+    text-align: center;
+    color:black;
+    padding:8vh;
+}
+.here:hover{
+    color:orange;
+    font-weight:700;
 }
