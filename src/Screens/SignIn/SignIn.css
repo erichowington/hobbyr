@@ -1,0 +1,51 @@
+.signin-logo-img{
+    width:26vw;
+    padding:2vh 0 1vh 2vw;
+}
+.signin-wrapper{
+    font-family: "Roboto Mono";
+}
+.signin-container{
+    display: flex;
+    flex-direction:column;
+    width:50vw;
+    margin:10vh auto;
+
+}
+.signin-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Roboto Mono";
+}
+.input, .signin-user{
+    font-family: "Roboto Mono";
+    border: .1em solid rgb(72,72,72);
+    padding: 1em;
+
+}
+.input, .signin-password{
+    font-family: "Roboto Mono";
+    border: .1em solid rgb(72, 72, 72);
+    padding:1em;
+}
+.signin-user-wrapper{
+    padding:1vh 0 0 0;
+    
+}
+.signin-password-wrapper{
+    padding:1vh 0 1vh 0;
+}
+.signin-button{
+    width:fit-content;
+    padding:1vh 3vh;
+    margin: 0 auto;
+    border:none;
+    border-radius: 1vh;
+    font-family: "Roboto Mono";
+    font-weight: 500;
+}
+.signin-button:hover{
+    background-color: rgb(98, 98, 189);
+    color:whitesmoke;
+}
