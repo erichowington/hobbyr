@@ -1,5 +1,5 @@
+import { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
-import React from 'react';
 import Feed from './Screens/Feed(Home)/Feed.jsx';
 import Browse from './Screens/Browse/Browse.jsx';
 import EditProfile from './Screens/EditProfile/EditProfile.jsx';
@@ -13,25 +13,16 @@ import SignOut from './Screens/SignOut/SignOut.jsx';
 import SignUp from './Screens/SignUp/SignUp.jsx';
 import Nav from './Components/Nav/Nav.jsx';
 
-
-
-
-
-
-
 function App () {
+  const [user, setUser] = useState( {} )
 
   return (
-
-
     <main>
-
       <Routes>
-
         <Route path='/' element={<Feed />} />
-        <Route path='/signin' element={<SignIn />} />
+        <Route path='/signin' element={<SignIn setUser={setUser} user={user} />} />
         <Route path='/signout' element={<SignOut />} />
-        <Route path='/signup' element={<SignUp />} />
+        <Route path='/signup' element={<SignUp setUser={setUser} user={user} />} />
         <Route path='/browse' element={<Browse />} />
         <Route path='/profile/:profileId' element={<Profile />} />
         <Route path='/editprofile/:profileId' element={<EditProfile />} />
@@ -42,12 +33,8 @@ function App () {
         <Route path='*' element={<h1>Page Not Found</h1>} />
       </Routes>
       <Nav />
-
     </main>
-
-
   );
-
 }
 
 export default App;

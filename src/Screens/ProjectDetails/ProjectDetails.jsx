@@ -1,4 +1,6 @@
 import React from 'react'
+
+
 import "./ProjectDetails.css"
 
 function ProjectDetails() {
@@ -8,3 +10,4 @@ function ProjectDetails() {
 }
 
 export default ProjectDetails
+
