@@ -10,11 +10,23 @@ export const getCommentsByProjectId = async (projectId) => {
   }
 };
 
-export const addComment = async (id) => {
+// export const addComment = async (projectId) => {
+//   try {
+//     const response = await api.post(`projects/${projectId}/add_comment/`);
+//     return response.data;
+//   } catch (error) {
+//     throw error;
+//   }
+// };
+
+export const addComment = async (projectId, commentBody) => {
   try {
-    const response = await api.post(`projects/${id}/add_comment/`);
+    const response = await api.post(`projects/${projectId}/add_comment/`, {
+      comment_body: commentBody, // Ensure this matches the expected backend API
+    });
     return response.data;
   } catch (error) {
+    console.error("Error adding comment:", error);
     throw error;
   }
 };

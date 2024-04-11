@@ -80,15 +80,6 @@ function CreateProject({profile}) {
             onChange={handleChange}
             required
           />
-          {/* <input
-            className='project-image-form'
-            type='file'
-            placeholder='upload image'
-            name='project_img'
-            value={project.project_img}
-            onChange={handleChange}
-            required
-          /> */}
           <input
             className='project-image-form'
             type='file'

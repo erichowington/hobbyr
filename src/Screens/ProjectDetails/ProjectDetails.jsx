@@ -18,17 +18,16 @@ function ProjectDetails() {
 
   useEffect(() => {
     fetchProject();
-  }, []); 
+  }, [projectId]); 
 
   const handleDelete = async (id) => {
     await deleteProject(id); 
-    navigate("/fproject/3/eed"); 
+    navigate("/feed"); 
   };
 
   return (
     <div className="project-details">
       <div className="detailContent">
-      <CommentModal projectId={projectId} />
         <h1>{project.project_title}</h1>
 
         {project.project_img && (
@@ -48,6 +47,7 @@ function ProjectDetails() {
         </div>
         <Link to="/projects">Back to Projects</Link>
       </div>
+      <CommentModal projectId={projectId} />
       
     </div>
   );
