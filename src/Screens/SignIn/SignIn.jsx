@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { signIn } from "../../Services/users.js";
 import "./SignIn.css";
 
-function SignIn({ setUser }) {
+function SignIn({ setUser, setProfile }) {
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
@@ -28,7 +28,8 @@ function SignIn({ setUser }) {
 
     try {
       const userData = await signIn(form);
-      setUser(userData);
+      setUser(userData.user);
+      setProfile(userData.userProfile)
 
       navigate("/browse");
     } catch (error) {
