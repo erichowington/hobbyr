@@ -1,20 +1,8 @@
 import { useState, useEffect } from "react";
 import { getProject, deleteProject } from "../../Services/project.js";
 import { Link, useParams, useNavigate, NavLink } from "react-router-dom";
+import CommentModal from "../../Components/CommentModal/CommentModal.jsx";
 import "./ProjectDetails.css";
-
-// import "./ProjectDetails.css"
-
-// function ProjectDetails() {
-//   const [project, setProject] = useState({});
-
-
-//   return (
-//     <div>ProjectDetails</div>
-//   )
-// }
-
-// export default ProjectDetails
 
 
 
@@ -30,7 +18,7 @@ function ProjectDetails() {
 
   useEffect(() => {
     fetchProject();
-  }); 
+  }, []); 
 
   const handleDelete = async (id) => {
     await deleteProject(id); 
@@ -40,6 +28,7 @@ function ProjectDetails() {
   return (
     <div className="project-details">
       <div className="detailContent">
+      <CommentModal projectId={projectId} />
         <h1>{project.project_title}</h1>
 
         {project.project_img && (
@@ -59,6 +48,7 @@ function ProjectDetails() {
         </div>
         <Link to="/projects">Back to Projects</Link>
       </div>
+      
     </div>
   );
 }
