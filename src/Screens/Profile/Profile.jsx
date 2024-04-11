@@ -1,8 +1,8 @@
-import React from "react";
+import {useState, useEffect } from "react";
 import UserProfile from "../../Components/UserProfile/UserProfile";
 
 
-function Profile() {
+function Profile({profile}) {
   return (
    <div className="profile">
     <UserProfile/>

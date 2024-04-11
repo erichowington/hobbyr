@@ -3,7 +3,7 @@ import "./CommentModal.css"
 
 function CommentModal() {
   return (
-    <div>CommentModal</div>
+    <div></div>
   )
 }
 

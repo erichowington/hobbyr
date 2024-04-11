@@ -1,8 +1,26 @@
 import React from 'react'
+import { getUserProfile } from '../../Services/userProfile';
+import { useState, useEffect  } from 'react';
 import "./UserProfile.css"
+import { useParams } from 'react-router-dom'
 
-function UserProfile() {
-  return (
+
+function UserProfile({ profile }) {
+  const [current, setCurrent]= useState({})
+
+  const { profileId } = useParams()
+  
+
+  useEffect(()=>{
+    const fetchProfile = async () => {
+      const oneProfile = await getUserProfile(profileId);
+      setCurrent(oneProfile)
+    };
+    fetchProfile();
+  }, [])
+
+return (
+
     <div className="profile-wrapper">
       <div className="profile-logo-wrapper">
         <img className="profile-logo" src="https://github.com/erichowington/hobbyr/blob/dev/public/images/hobbyr-logos/hobbyr-logo-orange.png?raw=true"/>
@@ -17,7 +35,7 @@ function UserProfile() {
                 alt="user-icon"
               />
             </div>
-            <div className="profile-username">User 1</div>
+            <div className="profile-username">{current.username}</div>
             <button className="follow-button">Follow</button>
           </div>
           <div className="profile-container-tr">
@@ -33,7 +51,7 @@ function UserProfile() {
             </div>
             <div className="profile-bio">
               <div className="bio-container">
-                <div className="bio-body">This is my Bio</div>
+                <div className="bio-body">{current.bio}</div>
               </div>
             </div>
           </div>

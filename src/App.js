@@ -34,7 +34,10 @@ function App() {
           element={<SignUp setUser={setUser} setProfile={setProfile} />}
         />
         <Route path="/browse" element={<Browse />} />
-        <Route path="/profile/:profileId" element={<Profile />} />
+        <Route
+          path="/profile/:profileId"
+          element={<Profile profile={profile} />}
+        />
         <Route path="/editprofile/:profileId" element={<EditProfile />} />
         <Route path="/projectdetails/:projectId" element={<ProjectDetails />} />
         <Route path="/editproject/:projectId" element={<EditProject />} />
