@@ -1,13 +1,66 @@
-import React from 'react'
+import { useState, useEffect } from "react";
+import { getProject, deleteProject } from "../../Services/project.js";
+import { Link, useParams, useNavigate, NavLink } from "react-router-dom";
+import "./ProjectDetails.css";
+
+// import "./ProjectDetails.css"
+
+// function ProjectDetails() {
+//   const [project, setProject] = useState({});
 
 
-import "./ProjectDetails.css"
+//   return (
+//     <div>ProjectDetails</div>
+//   )
+// }
+
+// export default ProjectDetails
+
+
 
 function ProjectDetails() {
+  const [project, setProject] = useState({});
+  let { projectId } = useParams();
+  let navigate= useNavigate();
+
+  const fetchProject = async () => {
+    const oneProject = await getProject(projectId); 
+    setProject(oneProject)
+  };
+
+  useEffect(() => {
+    fetchProject();
+  }); 
+
+  const handleDelete = async (id) => {
+    await deleteProject(id); 
+    navigate("/fproject/3/eed"); 
+  };
+
   return (
-    <div>ProjectDetails</div>
-  )
+    <div className="project-details">
+      <div className="detailContent">
+        <h1>{project.project_title}</h1>
+
+        {project.project_img && (
+          <img className="project-image" src={project.project_img} alt={project.project_title} />
+        )}
+        <div className="projectBody">
+          <p>{project.body}</p>
+        </div>
+        {project.link && (
+          <a href={project.link} target="_blank" rel="noopener noreferrer">Project Link</a>
+        )}
+        <div>
+          <Link to={`/projects/${projectId}/edit`}>
+            <button className="edit">EDIT</button>
+          </Link>
+          <button className="delete" onClick={handleDelete}>DELETE</button>
+        </div>
+        <Link to="/projects">Back to Projects</Link>
+      </div>
+    </div>
+  );
 }
 
-export default ProjectDetails
-
+export default ProjectDetails;
