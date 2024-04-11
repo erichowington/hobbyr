@@ -26,7 +26,6 @@ function Register({ setUser }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     try {
       const userData = await signUp(form);
       console.log(userData);
