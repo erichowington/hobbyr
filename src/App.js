@@ -22,8 +22,14 @@ function App() {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const user = await verifyUser();
-      user ? setUser(user) : setUser(null);
+      const userData = await verifyUser();
+      if (userData.user) {
+        setUser(userData.user);
+        setProfile(userData.userProfile);
+      } else {
+        setUser(null);
+        setProfile(null);
+      }
     };
 
     fetchUser();

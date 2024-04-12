@@ -6,7 +6,7 @@ function Project({ project }) {
     <div>
       <div className="image-container">
         <Link to={`/projectdetails/${project.id}`}>
-        <img src={project.project_img} alt={project.project_title} style={{ width: '10em' }} />
+        <img src={project.project_img} alt={project.project_title} key= {project.project_title} style={{ width: '10em' }} />
         </Link>
       </div>
     </div>
