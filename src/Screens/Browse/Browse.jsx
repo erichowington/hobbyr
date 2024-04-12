@@ -1,6 +1,10 @@
 import "./Browse.css"
 import React, { useState, useEffect } from 'react';
+
 import { getProjects, getProjectsByType } from "../../Services/project";
+
+import Project from "../../Components/Project/Project";
+
 
 const PROJECT_TYPES = [
   { code: 'T', name: 'Tech' },
@@ -56,13 +60,15 @@ const Browse = () => {
       </select>
       <div className="browse-content">
         {projects.map((project) => (
-          <div key={project.id} className="browse-project-card">
-            <h2 className="browse-project-title">{project.project_title}</h2>
-            {project.project_img && <img src={project.project_img} alt={project.project_title} style={{ width: '10em' }} />}
-            <p>{project.body}</p>
-            {project.link && <a href={project.link} target="_blank" rel="noopener noreferrer">More Info</a>}
-            <p>Created on: {new Date(project.created_at).toLocaleDateString()}</p>
-          </div>
+          <Project project={project} />
+
+          // <div key={project.id} className="browse-project-card">
+          //   <h2 className="browse-project-title">{project.project_title}</h2>
+          //   {project.project_img && <img src={project.project_img} alt={project.project_title} style={{ width: '10em' }} />}
+          //   <p>{project.body}</p>
+          //   {project.link && <a href={project.link} target="_blank" rel="noopener noreferrer">More Info</a>}
+          //   <p>Created on: {new Date(project.created_at).toLocaleDateString()}</p>
+          // </div>
         ))}
       </div>
     </div>

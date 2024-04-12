@@ -1,5 +1,4 @@
 import React from 'react'
-import "/.Project.css"
 import { Link } from 'react-router-dom';
 
 function Project({ project }) {
@@ -7,10 +6,7 @@ function Project({ project }) {
     <div>
       <div className="image-container">
         <Link to={`/projectdetails/${project.id}`}>
-          <img className="icon" src={typeof project_img == "string" ? 
-          project.project_img: project.project_img} 
-          alt={project.title} 
-          />
+        <img src={project.project_img} alt={project.project_title} key= {project.project_title} style={{ width: '10em' }} />
         </Link>
       </div>
     </div>

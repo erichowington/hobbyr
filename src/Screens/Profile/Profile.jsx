@@ -5,7 +5,7 @@ import UserProfile from "../../Components/UserProfile/UserProfile";
 function Profile({profile}) {
   return (
    <div className="profile">
-    <UserProfile/>
+    <UserProfile profile={profile}/>
 
    </div>
   );

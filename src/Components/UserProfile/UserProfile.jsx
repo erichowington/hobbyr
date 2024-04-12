@@ -6,17 +6,23 @@ import { useParams } from 'react-router-dom'
 
 
 function UserProfile({ profile }) {
-  const [current, setCurrent]= useState({})
+  const [current, setCurrent]= useState({ profile })
 
   const { profileId } = useParams()
+
   
 
   useEffect(()=>{
     const fetchProfile = async () => {
       const oneProfile = await getUserProfile(profileId);
       setCurrent(oneProfile)
+
+     
     };
     fetchProfile();
+   
+    
+
   }, [])
 
 return (
