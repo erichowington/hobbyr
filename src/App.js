@@ -47,7 +47,8 @@ function App() {
               <ProjectDetails setProfile={setProfile} profile={profile} />
             }
           />
-          <Route path="/editproject/:projectId" element={<EditProject />} />
+          <Route path="/projects/:projectId/edit" element={<EditProject />} />
+
           <Route path="/favs" element={<Favs />} />
           <Route
             path="/createproject"

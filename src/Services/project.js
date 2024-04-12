@@ -44,3 +44,13 @@ export const deleteProject = async (id, projectData) => {
     throw error;
   }
 };
+
+
+export const getProjectsByType = async (projectType) => {
+  try {
+    const response = await api.get(`/projects/type/${projectType}/`);
+    return response.data;
+  } catch (error) {
+    throw error;  // Re-throwing the error to be handled by the caller
+  }
+};

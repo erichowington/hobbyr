@@ -1,12 +1,18 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { createProject } from "../../Services/project.js";
+import { createProject } from "../../Services/project";
 import "./CreateProject.css";
 
+const PROJECT_TYPES = [
+  { code: 'T', name: 'Tech' },
+  { code: 'C', name: 'Carpentry' },
+  { code: 'R', name: 'Renovations' },
+  { code: 'A', name: 'Art & Design' },
+  { code: 'J', name: 'Jewelry' },
+  { code: 'H', name: 'Homegoods' }
+];
 
-
-function CreateProject({profile}) {
+function CreateProject({ profile }) {
   const [project, setProject] = useState({
     project_title: '',
     project_type: '',
@@ -18,46 +24,34 @@ function CreateProject({profile}) {
 
   let navigate = useNavigate();
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   await createProject(project);
-  //   navigate('/feed');
-  // };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Create a FormData object to handle file uploads
     const formData = new FormData();
     formData.append('project_title', project.project_title);
     formData.append('project_type', project.project_type);
-    formData.append('project_img', project.project_img); // Append the file object
-    
-    // Append other fields if needed
+    formData.append('project_img', project.project_img);
     formData.append('body', project.body);
     formData.append('link', project.link);
     formData.append('user_profile', project.user_profile);
-  
-    await createProject(formData); // Send formData instead of project object
+
+    await createProject(formData);
     navigate('/feed');
   };
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
     if (name === 'project_img') {
-      setProject((prevProject) => ({
+      setProject(prevProject => ({
         ...prevProject,
         [name]: files[0]
       }));
     } else {
-      setProject((prevProject) => ({
+      setProject(prevProject => ({
         ...prevProject,
         [name]: value
       }));
     }
   };
-
-
 
   return (
     <div className='create-wrapper'>
@@ -72,20 +66,23 @@ function CreateProject({profile}) {
             required
             autoFocus
           />
-          <input
+          <select
             className='project-type-form'
-            placeholder='type'
             name='project_type'
             value={project.project_type}
             onChange={handleChange}
             required
-          />
+          >
+            <option value="">Select a Project Type</option>
+            {PROJECT_TYPES.map(type => (
+              <option key={type.code} value={type.code}>{type.name}</option>
+            ))}
+          </select>
           <input
             className='project-image-form'
             type='file'
-            placeholder='upload image'
             name='project_img'
-            accept='image/jpeg,image/png,image/gif'
+            accept='image/*'
             onChange={handleChange}
           />
           <textarea
@@ -108,7 +105,7 @@ function CreateProject({profile}) {
         </form>
       </div>
     </div>
-  )
+  );
 }
 
-export default CreateProject
+export default CreateProject;
