@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { userProfile } from "../UserProfile/UserProfile.jsx"
 
 import "./Nav.css"
 
