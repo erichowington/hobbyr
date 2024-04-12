@@ -25,6 +25,9 @@ function ProjectDetails() {
     navigate("/feed"); 
   };
 
+
+  
+
   return (
     <div className="project-details">
       <div className="detailContent">
@@ -45,6 +48,7 @@ function ProjectDetails() {
           </Link>
           <button className="delete" onClick={handleDelete}>DELETE</button>
         </div>
+
         <Link to="/projects">Back to Projects</Link>
       </div>
       <CommentModal projectId={projectId} />
