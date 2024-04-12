@@ -2,6 +2,7 @@ import React from 'react'
 import "./CommentModal.css"
 import {useState, useEffect } from 'react'
 import { getCommentsByProjectId, addComment } from '../../Services/comment.js'
+import Modal from 'react-modal';
 
 
 const CommentModal = ({ projectId }) => {
@@ -9,6 +10,37 @@ const CommentModal = ({ projectId }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [newComment, setNewComment] = useState({comment_body: ''});
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  Modal.setAppElement('#root');
+
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  const customStyles = {
+    content: {
+      top: 'auto',
+      left: '0',
+      right: '0',
+      bottom: '0',
+      marginRight: 'auto',
+      transform: 'translate(0, 0)',
+      maxHeight: '80%', // Set max height for modal
+      overflow: 'auto',
+      borderTopLeftRadius: '16px',
+      borderTopRightRadius: '16px',
+      padding: '20px'
+    },
+    overlay: {
+      backgroundColor: 'rgba(0, 0, 0, 0.5)'
+    }
+  };
 
   useEffect(() => {
       const fetchComments = async () => {
@@ -48,8 +80,30 @@ const CommentModal = ({ projectId }) => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
+
+
+ 
+
+  
+  // Suppresses modal-related console warnings
+  
+ 
+  
+   
+  
+
+
+
+
   return (
       <div className='comment-container'>
+        <button onClick={openModal}>Open Bottom Sheet</button>
+        <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
           <h1>Comments</h1>
           <form onSubmit={handleAddComment}>
               <textarea
@@ -70,6 +124,9 @@ const CommentModal = ({ projectId }) => {
                   </li>
               ))}
           </ul>
+
+          <button onClick={closeModal}>Close</button>
+          </Modal>
       </div>
   );
 };
