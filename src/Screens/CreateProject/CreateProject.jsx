@@ -55,6 +55,9 @@ function CreateProject({ profile }) {
 
   return (
     <div className='create-wrapper'>
+      <div className='form-logo-wrapper'>
+        <img className='form-logo' src="https://github.com/erichowington/hobbyr/blob/dev/public/images/hobbyr-logos/hobbyr-logo-white.png?raw=true" alt="" />
+      </div>
       <div className='create-form-container'>
         <form className='create-form' onSubmit={handleSubmit} encType='multipart/form-data'>
           <input
@@ -73,9 +76,9 @@ function CreateProject({ profile }) {
             onChange={handleChange}
             required
           >
-            <option value="">Select a Project Type</option>
+            <option className='form-options' id='form-options' value="">Select a Project Type</option>
             {PROJECT_TYPES.map(type => (
-              <option key={type.code} value={type.code}>{type.name}</option>
+              <option className='form-options' id="form-options" key={type.code} value={type.code}>{type.name}</option>
             ))}
           </select>
           <input
@@ -96,12 +99,12 @@ function CreateProject({ profile }) {
           />
           <input
             className='project-link-form'
-            placeholder='link to your project'
+            placeholder='add a link, if you have one'
             name='link'
             value={project.link}
             onChange={handleChange}
           />
-          <button type='submit'>Submit</button>
+          <button className='submit-create-button' type='submit'>Submit</button>
         </form>
       </div>
     </div>

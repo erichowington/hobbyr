@@ -1,0 +1,62 @@
+.create-wrapper {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.create-form-container {
+  width: 80vw;
+  margin: auto;
+  padding: 10vh 0 0 0;
+}
+.form-logo-wrapper {
+  width: 100vw;
+  background-color: #f89a4d;
+}
+.form-logo {
+  width: 25vh;
+  padding: 2vh 0 1vh 4vh;
+}
+.create-form {
+  display: flex;
+  flex-direction: column;
+}
+.input,
+.input-title-form {
+  font-family: "Roboto Mono";
+  border: 0.1em solid rgb(72, 72, 72);
+  padding: 1em;
+}
+
+.project-type-form {
+  font-family: "Roboto Mono";
+  border: 0.1em solid rgb(72, 72, 72);
+  padding: 1em;
+}
+
+.#form-options {
+  font-family: "Roboto Mono";
+  border: 0.1em solid rgb(72, 72, 72);
+  padding: 1em;
+  font-size: x-large;
+  color: red;
+}
+
+.project-image-form {
+  font-family: "Roboto Mono";
+  border: 0.1em solid rgb(72, 72, 72);
+  padding: 1em;
+}
+
+.submit-create-button {
+  width: fit-content;
+  padding: 1vh 3vh;
+  margin: 0 auto;
+  border: none;
+  border-radius: 1vh;
+  font-family: "Roboto Mono";
+  font-weight: 500;
+}
+.submit-create-button:hover {
+  background-color: rgb(98, 98, 189);
+  color: whitesmoke;
+}
