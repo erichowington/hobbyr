@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom'
 // import { NavLink , useParams } from 'react-router-dom'
 // import { userProfile } from "../UserProfile/UserProfile.jsx"
-// import { useUser } from '../../Context.js'
 // import { getUserProfile} from '../../Services/userProfile.js'
 // import { useState, useEffect } from 'react'
 import "./Nav.css"
@@ -9,6 +8,7 @@ import "./Nav.css"
 
 
 function Nav({profile}) {
+  
   // const [profile, setProfile] = useState();
   // let { id } = useParams(); // Destructuring to get id from URL parameters
 

@@ -52,7 +52,7 @@ function App() {
             path="/signup"
             element={<SignUp setUser={setUser} setProfile={setProfile} />}
           />
-          <Route path="/browse" element={<Browse profile={setProfile} />} />
+          <Route path="/browse" element={<Browse profile={profile} />} />
           <Route
             path="/profile/:profileId"
             element={<Profile profile={profile} />}
@@ -60,9 +60,7 @@ function App() {
           <Route path="/editprofile/:profileId" element={<EditProfile />} />
           <Route
             path="/projectdetails/:projectId"
-            element={
-              <ProjectDetails setProfile={setProfile} profile={profile} />
-            }
+            element={<ProjectDetails profile={profile} />}
           />
           <Route path="/projects/:projectId/edit" element={<EditProject />} />
 
