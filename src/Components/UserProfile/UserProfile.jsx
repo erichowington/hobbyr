@@ -1,32 +1,54 @@
-import React from 'react'
 import { getUserProfile } from '../../Services/userProfile';
-import { useState, useEffect  } from 'react';
-import "./UserProfile.css"
-import { useParams } from 'react-router-dom'
+import { Follow, Unfollow  } from '../../Services/follow.js';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import "./UserProfile.css";
 
+function UserProfile() {
+  const { profileId } = useParams();
+  const [profile, setProfile] = useState(null);
+  const [isFollowing, setIsFollowing] = useState(false);
 
-function UserProfile({ profile }) {
-  const [current, setCurrent]= useState({ profile })
-
-  const { profileId } = useParams()
-
-  
-
-  useEffect(()=>{
+  useEffect(() => {
     const fetchProfile = async () => {
-      const oneProfile = await getUserProfile(profileId);
-      setCurrent(oneProfile)
-
-     
+      try {
+        const userProfile = await getUserProfile(profileId);
+        setProfile(userProfile);
+        setIsFollowing(userProfile.isFollowing);
+      } catch (error) {
+        console.error('Error fetching profile:', error);
+      }
     };
     fetchProfile();
-   
-    
+  }, [profileId]);
 
-  }, [])
+  const handleFollow = async () => {
+    try {
+      await Follow(profileId);
+      setIsFollowing(true);
+      alert('You are now following');
+    } catch (error) {
+      console.error('Failed to follow:', error);
+      alert('Failed to follow the user');
+    }
+  };
 
-return (
+  const handleUnfollow = async () => {
+    try {
+      await Unfollow(profileId);
+      setIsFollowing(false);
+      alert('You have unfollowed');
+    } catch (error) {
+      console.error('Failed to unfollow:', error);
+      alert('Failed to unfollow the user');
+    }
+  };
 
+  if (!profile) {
+    return <div>Loading...</div>; 
+  }
+
+  return (
     <div className="profile-wrapper">
       <div className="profile-logo-wrapper">
         <img className="profile-logo" src="https://github.com/erichowington/hobbyr/blob/dev/public/images/hobbyr-logos/hobbyr-logo-orange.png?raw=true"/>
@@ -41,8 +63,12 @@ return (
                 alt="user-icon"
               />
             </div>
-            <div className="profile-username">{current.username}</div>
-            <button className="follow-button">Follow</button>
+            <div className="profile-username">{profile.username}</div>
+            {isFollowing ? (
+              <button className="unfollow-button" onClick={handleUnfollow}>Unfollow</button>
+            ) : (
+              <button className="follow-button" onClick={handleFollow}>Follow</button>
+            )}
           </div>
           <div className="profile-container-tr">
             <div className="follow-tracker">
@@ -57,7 +83,7 @@ return (
             </div>
             <div className="profile-bio">
               <div className="bio-container">
-                <div className="bio-body">{current.bio}</div>
+                <div className="bio-body">{profile.bio}</div>
               </div>
             </div>
           </div>
@@ -67,4 +93,4 @@ return (
   );
 }
 
-export default UserProfile
+export default UserProfile;
