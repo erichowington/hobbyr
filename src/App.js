@@ -13,10 +13,21 @@ import SignOut from "./Screens/SignOut/SignOut.jsx";
 import SignUp from "./Screens/SignUp/SignUp.jsx";
 import Nav from "./Components/Nav/Nav.jsx";
 import "./App.css";
+import { verifyUser } from "./Services/users.js";
+import { useEffect } from "react";
 
 function App() {
-  const [user, setUser] = useState({});
   const [profile, setProfile] = useState({});
+  const [user, setUser] = useState({});
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verifyUser();
+      user ? setUser(user) : setUser(null);
+    };
+
+    fetchUser();
+  }, []);
 
   return (
     <div className="app-wrapper">
@@ -35,7 +46,7 @@ function App() {
             path="/signup"
             element={<SignUp setUser={setUser} setProfile={setProfile} />}
           />
-          <Route path="/browse" element={<Browse profile={profile} />} />
+          <Route path="/browse" element={<Browse profile={setProfile} />} />
           <Route
             path="/profile/:profileId"
             element={<Profile profile={profile} />}
@@ -55,7 +66,7 @@ function App() {
           />
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
-        <Nav />
+        <Nav profile={profile} />
       </main>
     </div>
   );
