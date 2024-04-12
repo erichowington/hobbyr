@@ -27,8 +27,8 @@ function App() {
         setUser(userData.user);
         setProfile(userData.userProfile);
       } else {
-        setUser(null);
-        setProfile(null);
+        setUser({});
+        setProfile({});
       }
     };
 
