@@ -35,7 +35,7 @@ function App() {
             path="/signup"
             element={<SignUp setUser={setUser} setProfile={setProfile} />}
           />
-          <Route path="/browse" element={<Browse />} />
+          <Route path="/browse" element={<Browse profile={profile} />} />
           <Route
             path="/profile/:profileId"
             element={<Profile profile={profile} />}
