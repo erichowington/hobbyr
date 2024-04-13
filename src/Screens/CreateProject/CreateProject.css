@@ -33,13 +33,6 @@
   padding: 1em;
 }
 
-.#form-options {
-  font-family: "Roboto Mono";
-  border: 0.1em solid rgb(72, 72, 72);
-  padding: 1em;
-  font-size: x-large;
-  color: red;
-}
 
 .project-image-form {
   font-family: "Roboto Mono";

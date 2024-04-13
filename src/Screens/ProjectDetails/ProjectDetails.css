@@ -1,4 +1,123 @@
-.project-details {
-  height: max-content;
-  overflow-y: scroll;
+
+.project-details-wrapper{
+  width:100vw;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
 }
+.details-logo-wrapper {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:100vw;
+}
+.details-logo {
+  width: 26vw;
+  padding: 2vh 0 .5vw 2vw;
+}
+.details-header-link{
+  text-decoration: none;
+  font-family: "Roboto Mono";
+  padding:2vh 2vw .5vw 2vw;
+  color:rgb(151, 151, 151);
+
+}
+.project-details{
+  width:100vw;
+
+}
+
+.project-image-wrapper{
+  width:75vw;
+  height:75vw;
+  padding:2vh;
+  margin:auto;
+  display: flex;
+  justify-content: center;
+
+}
+.project-image{
+  width: 100%;
+  height:  100%;
+  object-fit: scale-down;
+}
+.project-body-container{
+  border:none;
+  background-color:rgb(238, 240, 240, 0.5);
+  width:85vw;
+  height:20vw;
+  margin: 0 0 0 3vw;
+  padding:1vh;
+  font-family: "Roboto Mono";
+  font-weight: 500;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+.project-body{
+  margin:1vh 0 0 1vw;
+  font-size: 1.75vh;
+}
+.project-details-link{
+  margin-left: 60vw;
+}
+.project-link{
+  text-decoration: none;
+  color:black;
+  font-family: "Roboto Mono";
+}
+.project-link:hover{
+  font-weight:900;
+  font-size: large;
+}
+
+.types-container{
+  display:flex;
+  flex-direction: column;
+  width:70vw;
+  padding:0 0 3vw 0;
+}
+.project-title{
+  font-family: "Roboto Mono";
+  font-weight: 500;
+  font-size: 5vw;
+}
+.title-head{
+  color:rgb(98, 98, 189);
+  font-size: 4vw;
+  margin:0 0 0 2vw;
+}
+.project-details-type{
+  font-family: "Roboto Mono";
+  font-weight: 500;
+  font-size: 3vw;
+  padding:0 0 0 0;
+  margin:0 0 0 2vw;
+  background-color:#f89a4d;
+  width:fit-content;
+}
+.my-project-options{
+  display: flex;
+  justify-content: center;
+}
+.edit-the-project, .delete-the-project{
+  border:none;
+  font-family: "Roboto Mono";
+  padding:3vw;
+  margin:3vw;
+  background-color: white;
+  color:gray;
+}
+.edit-the-project:hover{
+  color: #f89a4d;
+  font-weight:900;
+  font-size: large;
+}
+.delete-the-project:hover{
+  color:rgb(98, 98, 189);
+  font-weight:900;
+  font-size: large;
+}
+
