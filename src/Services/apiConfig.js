@@ -9,6 +9,9 @@ const getToken = () => {
 
 const api = axios.create({
   baseURL: "https://hobbyr-db-fe2543498be7.herokuapp.com/",
+  headers: {
+    "Content-Type": "application/json",
+  },
 });
 
 api.interceptors.request.use(

@@ -20,7 +20,12 @@ export const getProject = async (id) => {
 
 export const createProject = async (projectData) => {
   try {
-    const response = await api.post("/projects/", projectData);
+    console.log(projectData);
+    const response = await api.post("/projects/", projectData, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     return response.data;
   } catch (error) {
     throw error;

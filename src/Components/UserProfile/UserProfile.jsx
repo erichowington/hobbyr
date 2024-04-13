@@ -13,37 +13,40 @@ function UserProfile({ myProfile }) {
   
   const { profileId } = useParams();
 
+
   useEffect(() => {
     const fetchProfile = async () => {
       try {
         const userProfile = await getUserProfile(profileId);
         const followsFollowerData = await getFollows(profileId);
-
         setProfile(userProfile);
-
         const isFollowingData = followsFollowerData.following.some(user => {
           return user.id === myProfile.id
         })
-
         setIsFollowing(isFollowingData);
 
         setFollowers(followsFollowerData.following);
         setFollowing(followsFollowerData.followers);
       } catch (error) {
         console.error("Error fetching profile:", error);
+        
+      
       }
     };
+    
     fetchProfile();
   }, [profileId, myProfile, toggle]);
 
   const handleFollow = async () => {
     try {
+      
       await Follow(profileId);
       setToggle(prev => !prev)
       alert("You are now following");
     } catch (error) {
       console.error("Failed to follow:", error);
       alert("Failed to follow the user");
+      
     }
   };
 
