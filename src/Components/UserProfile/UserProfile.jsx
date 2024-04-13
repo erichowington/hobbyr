@@ -98,6 +98,7 @@ function UserProfile({ myProfile }) {
             <div className="follow-tracker">
               <div className="profile-followers">
                 <div className="followers-header">Followers</div>
+
                 <div className="follower-count">{followers.length}</div>
               </div>
               <div className="profile-following">
