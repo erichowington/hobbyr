@@ -1,0 +1,50 @@
+.edit-wrapper {
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+  }
+  .edit-form-container {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 10vh 0 0 0;
+  }
+  .edit-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .input,
+  .input-title-form {
+    font-family: "Roboto Mono";
+    border: 0.1em solid rgb(72, 72, 72);
+    padding: 1em;
+  }
+  
+  .project-type-form {
+    font-family: "Roboto Mono";
+    border: 0.1em solid rgb(72, 72, 72);
+    padding: 1em;
+  }
+  
+  
+  .project-image-form {
+    font-family: "Roboto Mono";
+    border: 0.1em solid rgb(72, 72, 72);
+    padding: 1em;
+  }
+  
+  .submit-edit-button {
+    width: fit-content;
+    padding: 1vh 3vh;
+    margin: 0 auto;
+    border: none;
+    border-radius: 1vh;
+    font-family: "Roboto Mono";
+    font-weight: 500;
+  }
+  .submit-edit-button:hover {
+    background-color: rgb(98, 98, 189);
+    color: whitesmoke;
+  }
+  
