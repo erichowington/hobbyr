@@ -42,12 +42,13 @@ const Browse = () => {
       setProjects(data);
     } catch (error) {
       console.error("Failed to fetch projects by type:", error);
+      
     }
   };
 
   return (
     <div className="browse-wrapper">
-      <h1 className="browse-title">Projects</h1>
+      <h1 className="browse-title">Browse</h1>
       <select
         value={projectType}
         onChange={e => setProjectType(e.target.value)}
@@ -59,6 +60,7 @@ const Browse = () => {
         ))}
       </select>
       <div className="browse-content">
+        
         {projects.map((project) => (
           <Project project={project} />
 
@@ -70,6 +72,7 @@ const Browse = () => {
           //   <p>Created on: {new Date(project.created_at).toLocaleDateString()}</p>
           // </div>
         ))}
+        
       </div>
     </div>
   );
