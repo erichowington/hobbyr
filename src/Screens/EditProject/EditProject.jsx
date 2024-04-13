@@ -18,7 +18,7 @@ function EditProject() {
   const [project, setProject] = useState({
     project_title: '',
     project_type: '',
-    project_img: null,
+    project_img: '',
     body: '',
     link: '',
     user_profile: ''
@@ -30,7 +30,6 @@ function EditProject() {
         const fetchedProject = await getProject(projectId);
         setProject({
           ...fetchedProject,
-          project_img: null 
         });
       } catch (error) {
         console.error('Failed to fetch project', error);
@@ -54,26 +53,39 @@ function EditProject() {
 
     try {
       await updateProject(projectId, formData);
-      navigate('/feed'); 
+      navigate(`/projectdetails/${projectId}`); 
     } catch (error) {
       console.error('Failed to update project', error);
     }
   };
 
+  // const handleChange = (e) => {
+  //   const { name, value, files } = e.target;
+  //   if (name === 'project_img') {
+  //     setProject(prevProject => ({
+  //       ...prevProject,
+  //       [name]: files[0]
+  //     }));
+  //   } else {
+  //     setProject(prevProject => ({
+  //       ...prevProject,
+  //       [name]: value
+  //     }));
+  //   }
+  // };
+
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === 'project_img') {
-      setProject(prevProject => ({
-        ...prevProject,
-        [name]: files[0]
-      }));
-    } else {
-      setProject(prevProject => ({
-        ...prevProject,
-        [name]: value
-      }));
-    }
-  };
+    const { name, value } = e.target;
+
+    setProject(prevProject => ({
+      ...prevProject,
+      [name]: value
+    }));
+    
+
+};
+
+
 
   return (
     <div className='edit-wrapper'>
@@ -100,12 +112,20 @@ function EditProject() {
               <option key={type.code} value={type.code}>{type.name}</option>
             ))}
           </select>
-          <input
+          {/* <input
             className='project-image-form'
             type='file'
             name='project_img'
-            accept='image/*'
             onChange={handleChange}
+          /> */}
+          <input
+            className='project-image-form'
+            placeholder='Upload currently unsupported in beta. Please add URL to Image address'
+            name='project_img'
+            value={project.project_img}
+            onChange={handleChange}
+            required
+            autoFocus
           />
           <textarea
             className='project-body-form'

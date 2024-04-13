@@ -53,7 +53,7 @@ function CreateProject({ profile }) {
         ...prevProject,
         [name]: value
       }));
-      console.log(project)
+      
 
   };
 
@@ -93,8 +93,8 @@ function CreateProject({ profile }) {
             onChange={handleChange}
           /> */}
            <input
-            className='input-title-form'
-            placeholder='title'
+            className='project-image-form'
+            placeholder='Upload currently unsupported in beta. Please add URL to Image address'
             name='project_img'
             value={project.project_img}
             onChange={handleChange}

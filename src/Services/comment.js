@@ -10,14 +10,6 @@ export const getCommentsByProjectId = async (projectId) => {
   }
 };
 
-// export const addComment = async (projectId) => {
-//   try {
-//     const response = await api.post(`projects/${projectId}/add_comment/`);
-//     return response.data;
-//   } catch (error) {
-//     throw error;
-//   }
-// };
 
 export const addComment = async (projectId, commentBody) => {
   try {
