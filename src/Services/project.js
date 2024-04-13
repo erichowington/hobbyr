@@ -45,12 +45,17 @@ export const deleteProject = async (id, projectData) => {
   }
 };
 
-
 export const getProjectsByType = async (projectType) => {
   try {
     const response = await api.get(`/projects/type/${projectType}/`);
     return response.data;
   } catch (error) {
-    throw error;  // Re-throwing the error to be handled by the caller
+    throw error; // Re-throwing the error to be handled by the caller
   }
 };
+// projects/user-profile/<int:user_profile_id>/</int:user_profile_id>
+// export const getProjectsByIdIFollow = async (projectType) => {
+//   try {
+//     const response = await api.get(`/projects/type/${}/`)
+//   }
+// }
