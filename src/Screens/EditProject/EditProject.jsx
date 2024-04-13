@@ -89,6 +89,9 @@ function EditProject() {
 
   return (
     <div className='edit-wrapper'>
+      <div className='form-logo-wrapper'>
+        <img className='form-logo' src="https://github.com/erichowington/hobbyr/blob/dev/public/images/hobbyr-logos/hobbyr-logo-white.png?raw=true" alt="" />
+      </div>
       <div className='edit-form-container'>
         <form className='edit-form' onSubmit={handleSubmit} encType='multipart/form-data'>
           <input
@@ -112,12 +115,6 @@ function EditProject() {
               <option key={type.code} value={type.code}>{type.name}</option>
             ))}
           </select>
-          {/* <input
-            className='project-image-form'
-            type='file'
-            name='project_img'
-            onChange={handleChange}
-          /> */}
           <input
             className='project-image-form'
             placeholder='Upload currently unsupported in beta. Please add URL to Image address'
@@ -143,7 +140,7 @@ function EditProject() {
             value={project.link}
             onChange={handleChange}
           />
-          <button type='submit'>Update Project</button>
+          <button className='submit-edit-button' type='submit'>Update Project</button>
         </form>
       </div>
     </div>
