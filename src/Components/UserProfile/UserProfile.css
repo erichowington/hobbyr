@@ -1,83 +1,90 @@
-.profile-wrapper{
-    width:100vw;
+.profile-wrapper {
+  width: 100vw;
 }
-.profile-logo-wrapper{
-    width:fit-content;
-    height: fit-content;
+.profile-logo-wrapper {
+  width: fit-content;
+  height: fit-content;
 }
-.profile-logo{
-    width:26vw;
-    padding:2vh 0 0 2vw;
+.profile-logo {
+  width: 26vw;
+  padding: 2vh 0 0 2vw;
 }
-.profile-container{
-    background-color: rgb(238, 240, 240, 0.5);
+.profile-container {
+  background-color: rgb(238, 240, 240, 0.5);
 }
-.profile-img-wrapper{
-    width:fit-content;
+.profile-img-wrapper {
+  width: fit-content;
 }
-.profile-img{
-    width:10vh;
-    padding:1em 0 0 0;
+.profile-img {
+  width: 10vh;
+  padding: 1em 0 0 0;
 }
-.profile-container-top{
-    width:fit-content;
-    justify-self: center;
-    height:25vh;
-    display: flex;
-    flex-direction: row;
-    font-family: "Roboto Mono";
-    align-content: center;
-    
+.profile-container-top {
+  width: fit-content;
+  justify-self: center;
+  height: 25vh;
+  display: flex;
+  flex-direction: row;
+  font-family: "Roboto Mono";
+  align-content: center;
 }
-.profile-container-tl{
-    width: 30vw;
-    padding: 0 0 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.profile-container-tl {
+  width: 30vw;
+  padding: 0 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.profile-username{
-    padding:1vh 0 .25vh 0;
+.profile-username {
+  padding: 1vh 0 0.25vh 0;
 }
-.follow-button{
-    border:.2vh solid rgb(218, 217, 217);
-    background-color: white;
-    padding:1.2vw;
-    border-radius: .5vw;
-    font-weight: 550;
+.follow-button {
+  border: 0.2vh solid rgb(218, 217, 217);
+  background-color: white;
+  padding: 1.2vw;
+  border-radius: 1vw;
+  font-weight: 550;
 }
-.profile-container-tr{
-    width:60vw;
-    height:10vh;
-    display: flex;
-    flex-direction: column;
-    padding:0 0 0 1vh;
+.unfollow-button {
+  border: 0.2vh solid rgb(218, 217, 217);
+  background-color: rgb(98, 98, 189);
+  color: whitesmoke;
+  padding: 1.2vw;
+  border-radius: 1vw;
+  font-weight: 550;
 }
-.follow-tracker{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.profile-container-tr {
+  width: 60vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 1vh;
 }
-.profile-followers{
-    padding:4vh 4vh 1vh 0;
-    text-align: center;
+.follow-tracker {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-.profile-following{
-    padding:4vh 1vh 1vh 4vh;
-    text-align: center;
+.profile-followers {
+  padding: 4vh 4vh 1vh 0;
+  text-align: center;
 }
-.follower-header, .following-header{
-    font-weight: 400;
+.profile-following {
+  padding: 4vh 1vh 1vh 4vh;
+  text-align: center;
 }
-.follower-count{
-    font-weight: 700;
+.follower-header,
+.following-header {
+  font-weight: 400;
 }
-.following-count{
-    font-weight: 700;
+.follower-count {
+  font-weight: 700;
 }
-.bio-container{
-    padding:7vh 0 0 0;
-    display: flex;
-    justify-content: center;
-
+.following-count {
+  font-weight: 700;
+}
+.bio-container {
+  padding: 7vh 0 0 0;
+  display: flex;
+  justify-content: center;
 }

@@ -74,7 +74,7 @@ function UserProfile() {
             <div className="follow-tracker">
               <div className="profile-followers">
                 <div className="followers-header">Followers</div>
-                <div className="follower-count">200</div>
+                <div className="follower-count"></div>
               </div>
               <div className="profile-following">
                 <div className="following-header">Following</div>
