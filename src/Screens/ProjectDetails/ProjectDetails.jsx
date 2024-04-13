@@ -20,8 +20,7 @@ function ProjectDetails() {
     fetchProject();
   }, [projectId]); 
 
-
-  const handleDelete = async (Id) => {
+  const handleDelete = async (id) => {
     await deleteProject(projectId); 
     navigate("/feed"); 
   };

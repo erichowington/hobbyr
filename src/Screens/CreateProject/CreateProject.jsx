@@ -13,6 +13,8 @@ const PROJECT_TYPES = [
 ];
 
 function CreateProject({ profile }) {
+
+  console.log(profile.id)
   const [project, setProject] = useState({
     project_title: '',
     project_type: '',
@@ -33,24 +35,26 @@ function CreateProject({ profile }) {
     formData.append('body', project.body);
     formData.append('link', project.link);
     formData.append('user_profile', project.user_profile);
-
-    await createProject(formData);
+    console.log(formData)
+    await createProject(project);
     navigate('/feed');
   };
 
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === 'project_img') {
-      setProject(prevProject => ({
-        ...prevProject,
-        [name]: files[0]
-      }));
-    } else {
+    const { name, value } = e.target;
+    // if (name === 'project_img') {
+    //   setProject(prevProject => ({
+    //     ...prevProject,
+    //     [name]: files[0]
+    //   }));
+    //   console.log(project)
+    // } else {
       setProject(prevProject => ({
         ...prevProject,
         [name]: value
       }));
-    }
+      console.log(project)
+
   };
 
   return (
@@ -81,12 +85,21 @@ function CreateProject({ profile }) {
               <option className='form-options' id="form-options" key={type.code} value={type.code}>{type.name}</option>
             ))}
           </select>
-          <input
+          {/* <input
             className='project-image-form'
             type='file'
             name='project_img'
             accept='image/*'
             onChange={handleChange}
+          /> */}
+           <input
+            className='input-title-form'
+            placeholder='title'
+            name='project_img'
+            value={project.project_img}
+            onChange={handleChange}
+            required
+            autoFocus
           />
           <textarea
             className='project-body-form'
