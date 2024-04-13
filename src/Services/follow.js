@@ -1,8 +1,8 @@
 import api from "./apiConfig";
 
-export const getFollowers = async () => {
+export const getFollows = async (id) => {
   try {
-    const response = await api.get("/followers/");
+    const response = await api.get(`/follows/${id}/`);
     return response.data;
   } catch (error) {
     throw error;
