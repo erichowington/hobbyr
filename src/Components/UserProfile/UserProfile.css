@@ -1,9 +1,74 @@
 .profile-wrapper {
   width: 100vw;
+  overflow: overlay;
+  max-width: 100%;
+}
+.profile{
+  width:100vw;
+  max-width:100%;
+  overflow-x: hidden;
 }
 .profile-logo-wrapper {
-  width: fit-content;
-  height: fit-content;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between ;
+}
+.header-container{
+  display:flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width:100vw;
+  max-width:100%;
+}
+/*User Settings*/
+.settings-container{
+  display:flex;
+  width:100vw;
+  justify-content: right;
+
+}
+.settings-icon{
+  width:4vh;
+  filter: invert(52%) sepia(1%) saturate(2141%) hue-rotate(321deg) brightness(92%) contrast(83%);
+
+}
+.dropdown-toggle{
+  width:4vw;
+  margin:2vw 10vw 0 0;
+}
+.icon-container{
+  width:fit-content;
+  margin:0 5vw 0 0;
+ 
+}
+
+.dropdown-container{
+  width:30vw;
+  position: inherit;
+  margin:0 3vw 0 0;
+  overflow-x:overlay;
+  
+}
+.dropdown-content{
+  display: flex;
+  flex-direction: column;
+  width:20vw;
+  background-color: RGB(0,0,0,.3);
+  margin:0 3vw 0 0;
+  text-align: center;
+}
+.settings-link{
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Roboto Mono";
+  color: #7b7b7b;
+  margin:0 3vw 0 0;
+}
+.settings-link:hover{
+  color:rgb(98, 98, 189);
+
 }
 .profile-logo {
   width: 26vw;
@@ -11,6 +76,8 @@
 }
 .profile-container {
   background-color: rgb(238, 240, 240, 0.5);
+  padding:0;
+  overflow-x: hidden;
 }
 .profile-img-wrapper {
   width: fit-content;
