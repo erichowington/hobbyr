@@ -1,3 +1,75 @@
 .comment-container {
   height: 20vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255, 0.5);
 }
+.open-comment-container{
+  border:none;
+  background-color: white;
+  font-family: "Roboto Mono";
+  margin:auto;
+
+}
+.comment-head-container{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Roboto Mono";
+}
+.comment-header{
+  font-size: 2vh;
+
+}
+.close-comment-modal{
+  border:none;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: "Roboto Mono";
+  font-size:3vh;
+  font-weight: 400;
+  color:gray;
+}
+.close-comment-modal:hover{
+  color:black;
+  font-weight:700;
+}
+li{
+  list-style: none;
+}
+.added-comments{
+  font-family:"Roboto Mono";
+}
+.comment-user{
+  color:orange;
+}
+.added-comment-body{
+  font-weight: 500;
+}
+.added-comment-date{
+  color:gray;
+  font-size:1.25vh;
+}
+.add-comment-form{
+  display: flex;
+  flex-direction: row;
+}
+.add-comment-text-area{
+  border: none;
+  background-color: rgb(226, 226, 226, 0.6);
+  width:80%;
+  height:4vh;
+  padding:1vh;
+  margin:auto;
+}
+.add-comment-btn{
+  font-family:"Roboto Mono";
+  border:none;
+  background-color: white;
+  font-weight:500;
+  font-size: 3vh;
+  color:gray;
+}
+.add-comment-btn:hover{
+  color:orange;
+}
+
