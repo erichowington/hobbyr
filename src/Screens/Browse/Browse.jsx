@@ -59,8 +59,10 @@ const Browse = () => {
           </option>
         ))}
       </select>
+
       <div className="scrollable-gallery">
         <ProjectGallery projects={projects.slice(0, 5)} />
+
       </div>
       {projects.length > 5 && (
         <div className="scrollable-gallery">
