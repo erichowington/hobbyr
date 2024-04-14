@@ -46,6 +46,12 @@ const Browse = () => {
 
   return (
     <div className="browse-wrapper">
+      <div className="siginin-logo-wrapper">
+        <img
+          className="signin-logo-img"
+          src="https://github.com/erichowington/hobbyr/blob/dev/public/images/hobbyr-logos/hobbyr-logo-orange.png?raw=true"
+        />
+      </div>
       <h1 className="browse-title">Browse</h1>
       <select
         value={projectType}

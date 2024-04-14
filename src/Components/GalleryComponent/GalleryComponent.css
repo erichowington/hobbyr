@@ -1,8 +1,11 @@
 .gallery-wrapper {
     width: 100%;
     overflow-x:auto;
+    overflow-y:auto;
     white-space: nowrap;
     margin-bottom: 20px; 
+    padding:3vw;
+    align-items: center;
   }
   
   .gallery {

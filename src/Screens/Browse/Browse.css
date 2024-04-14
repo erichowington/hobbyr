@@ -1,3 +1,19 @@
+.browse-wrapper{
+    width:100vw;
+    overflow: hidden;
+}
+.browse-title{
+    font-family: "Roboto Mono";
+    font-weight: 900;
+    margin-left: 35vw;
+    color:whitesmoke;
+    background-color:rgb(98, 98, 189);
+    border-radius: 1vw;
+    letter-spacing: 1vw;
+    padding:1vh;
+    width:fit-content;
+}
+
 .browse-content {
     width: 100%;
     overflow-x: auto;
@@ -11,4 +27,10 @@
   }
 
 
-  
+  .dropdown-select{
+    color:black;
+    border:none;
+    font-family:"Roboto Mono";
+    margin-left:25vw;
+
+  }
