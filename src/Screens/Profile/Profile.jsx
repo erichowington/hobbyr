@@ -1,5 +1,6 @@
 import {useState, useEffect } from "react";
 import UserProfile from "../../Components/UserProfile/UserProfile.jsx";
+import "./Profile.css"
 
 
 function Profile({profile}) {
