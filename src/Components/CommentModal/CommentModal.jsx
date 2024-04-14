@@ -56,6 +56,7 @@ const CommentModal = ({ projectId }) => {
     fetchComments();
   }, [projectId]);
 
+
   const handleAddComment = async (event) => {
     event.preventDefault();
     if (!newComment.comment_body.trim()) return; // Prevents adding empty comments
@@ -63,11 +64,15 @@ const CommentModal = ({ projectId }) => {
       const response = await addComment(projectId, newComment.comment_body);
       console.log("Before update:", comments);
       console.log("After update:", setComments);
-
+  
       if (response) {
         // Assuming addComment resolves to the new comment object
         setComments((comments) => [...comments, response]); // Use a functional update for safety
         setNewComment({ comment_body: "" }); // Reset the input
+  
+        // Refetch comments after adding a new comment
+        const updatedComments = await getCommentsByProjectId(projectId);
+        setComments(updatedComments);
       }
     } catch (err) {
       setError(err.message);

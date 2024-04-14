@@ -89,6 +89,7 @@ function ProjectDetails() {
           </div>
           <div className="my-project-options">
             <Link to={`/projects/${projectId}/edit`}>
+              
               <button className="edit-the-project">EDIT</button>
             </Link>
             <button className="delete-the-project" onClick={handleDelete}>

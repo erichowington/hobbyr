@@ -1,7 +1,26 @@
+*{
+  box-sizing:content-box;
+}
+html{
+  max-width:fit-content;
+  overflow-x: hidden;
+}
+.come-tf-on{
+  width:100vw;
+  max-width:100%;
+}
 .app-wrapper {
   width: 95vw;
   max-width:100%;
   margin-bottom: 8em;
+}
+.main-wrapper{
+  width:100vw;
+  max-width:100%;
+}
+#root{
+  width:100vw;
+  max-width:100%;
 }
 
 .App-logo {

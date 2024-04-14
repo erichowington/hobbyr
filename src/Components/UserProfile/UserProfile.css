@@ -1,15 +1,19 @@
 .profile-wrapper {
-  width: 100vw;
+  /* width: 100vw; */
   overflow: overlay;
   max-width: 100%;
+  
+    width: 100%;
+    max-width: 100%;
+    position: relative; /* Ensure the parent container has a position */
+  
 }
 .profile{
-  width:100vw;
   max-width:100%;
   overflow-x: hidden;
 }
 .profile-logo-wrapper {
-  width: 100vw;
+  /* width: 100vw; */
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -19,28 +23,31 @@
   display:flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  width:100vw;
   max-width:100%;
 }
 /*User Settings*/
 .settings-container{
   display:flex;
-  width:100vw;
   justify-content: right;
 
 }
+.user-settings{
+  padding:0;
+  z-index: 10;
+}
 .settings-icon{
-  width:4vh;
+  width:3vh;
   filter: invert(52%) sepia(1%) saturate(2141%) hue-rotate(321deg) brightness(92%) contrast(83%);
-
+  margin:1vh 0 0 15vw;
+  
 }
 .dropdown-toggle{
-  width:4vw;
+  /* width:4vw; */
+  padding:0 0 0 3vw;
   margin:2vw 10vw 0 0;
 }
 .icon-container{
   width:fit-content;
-  margin:0 5vw 0 0;
  
 }
 
@@ -49,22 +56,27 @@
   position: inherit;
   margin:0 3vw 0 0;
   overflow-x:overlay;
+  z-index: 10;
   
 }
 .dropdown-content{
   display: flex;
   flex-direction: column;
-  width:20vw;
-  background-color: RGB(0,0,0,.3);
-  margin:0 3vw 0 0;
-  text-align: center;
+  width:fit-content;
+  background-color: RGB(0,0,0,.5);
+  position: absolute; 
+  z-index: 1000; 
+  padding:2vw;
+  border-radius: 2vw;
+  
 }
 .settings-link{
   text-decoration: none;
   font-weight: 600;
   font-family: "Roboto Mono";
-  color: #7b7b7b;
+  color: #ffffff;
   margin:0 3vw 0 0;
+  padding:1vw;
 }
 .settings-link:hover{
   color:rgb(98, 98, 189);
@@ -87,7 +99,6 @@
   padding: 1em 0 0 0;
 }
 .profile-container-top {
-  width: fit-content;
   justify-self: center;
   height: 25vh;
   display: flex;

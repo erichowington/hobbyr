@@ -37,7 +37,7 @@ function App() {
 
   return (
     <div className="app-wrapper">
-      <main>
+      <main className="main-wrapper">
         <Routes>
           <Route path="/" element={<Feed />} />
           <Route
