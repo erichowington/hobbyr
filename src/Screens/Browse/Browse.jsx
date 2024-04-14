@@ -62,7 +62,7 @@ const Browse = () => {
       <div className="browse-content">
         
         {projects.map((project) => (
-          <Project project={project} />
+          <Project key={project.id} project={project} />
 
           // <div key={project.id} className="browse-project-card">
           //   <h2 className="browse-project-title">{project.project_title}</h2>
