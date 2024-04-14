@@ -42,6 +42,27 @@ function EditProfile() {
     }
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+    
+  //   const updatedProfile = {
+  //     ...profile,
+  //     [e.target.name]: e.target.value // Update the profile state with the latest changes
+  //   };
+  
+  //   const formData = new FormData();
+  //   formData.append('username', updatedProfile.username);
+  //   formData.append('profile_pic', updatedProfile.profile_pic);
+  //   formData.append('bio', updatedProfile.bio);
+  
+  //   try {
+  //     await updateUserProfile(profileId, formData);
+  //     navigate(`/profile/${profileId}`); 
+  //   } catch (error) {
+  //     console.error('Failed to update profile', error);
+  //   }
+  // };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -54,7 +75,7 @@ function EditProfile() {
   return (
     <form className='edit-form' onSubmit={handleSubmit} encType='multipart/form-data'>
       <input
-        className='input-title-form'
+        className='input-username-form'
         placeholder='username'
         name='username'
         value={profile.username}
