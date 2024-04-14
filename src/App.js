@@ -57,7 +57,7 @@ function App() {
             path="/profile/:profileId"
             element={<Profile profile={profile} />}
           />
-          <Route path="/editprofile/:profileId" element={<EditProfile />} />
+          <Route path="/editprofile/:profileId" element={<EditProfile />} user={user} setUser={setUser} profile={profile} setProfile={setProfile} />
           <Route
             path="/projectdetails/:projectId"
             element={
