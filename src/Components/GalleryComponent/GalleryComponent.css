@@ -1,0 +1,16 @@
+.gallery-wrapper {
+    width: 100%;
+    overflow-x:auto;
+    white-space: nowrap;
+    margin-bottom: 20px; 
+  }
+  
+  .gallery {
+    display: flex;
+  }
+  
+  .gallery > div {
+    flex: 0 0 auto;
+    margin-right: 10px;
+  }
+

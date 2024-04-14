@@ -1,0 +1,14 @@
+.browse-content {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap; /* Prevents items from wrapping to the next line */
+    display: flex; /* Ensures items are displayed in a row */
+  }
+
+  .project {
+    flex: 0 0 auto; /* Prevents items from stretching to fill the container */
+    margin-right: 10px; /* Adjust margin as needed */
+  }
+
+
+  
