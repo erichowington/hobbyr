@@ -60,9 +60,23 @@ function App() {
           <Route path="/editprofile/:profileId" element={<EditProfile />} />
           <Route
             path="/projectdetails/:projectId"
-            element={<ProjectDetails setProfile={setProfile} setUser={setUser} profile={profile} user={user} />}
+            element={
+              <ProjectDetails
+                setProfile={setProfile}
+                setUser={setUser}
+                profile={profile}
+                user={user}
+              />
+            }
           />
-          <Route path="/projects/:projectId/edit" element={<EditProject />}  profile={profile} user={user} setProfile={setProfile} setUser={setUser}  />
+          <Route
+            path="/projects/:projectId/edit"
+            element={<EditProject />}
+            profile={profile}
+            user={user}
+            setProfile={setProfile}
+            setUser={setUser}
+          />
 
           <Route path="/favs" element={<Favs />} />
           <Route
