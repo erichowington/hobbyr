@@ -39,7 +39,7 @@ function App() {
     <div className="app-wrapper">
       <main className="main-wrapper">
         <Routes>
-          <Route path="/" element={<Feed />} />
+          <Route path="/" element={<Feed profile={profile} />} />
           <Route
             path="/signin"
             element={<SignIn setUser={setUser} setProfile={setProfile} />}
@@ -60,9 +60,9 @@ function App() {
           <Route path="/editprofile/:profileId" element={<EditProfile />} />
           <Route
             path="/projectdetails/:projectId"
-            element={<ProjectDetails profile={profile} />}
+            element={<ProjectDetails setProfile={setProfile} setUser={setUser} profile={profile} user={user} />}
           />
-          <Route path="/projects/:projectId/edit" element={<EditProject />} />
+          <Route path="/projects/:projectId/edit" element={<EditProject />}  profile={profile} user={user} setProfile={setProfile} setUser={setUser}  />
 
           <Route path="/favs" element={<Favs />} />
           <Route

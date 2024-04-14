@@ -2,7 +2,7 @@ import api from "./apiConfig";
 
 export const getUserProfiles = async () => {
   try {
-    const response = await api.get("/userprofiles/");
+    const response = await api.get("/profiles/");
     return response.data;
   } catch (error) {
     throw error;
@@ -38,7 +38,7 @@ export const updateUserProfile = async (id, userProfileData) => {
 
 export const deleteUserProfile = async (id, userProfileData) => {
   try {
-    const response = await api.delete(`/userprofiles/${id}/`, userProfileData);
+    const response = await api.delete(`/profiles/${id}/`, userProfileData);
     return response.data;
   } catch (error) {
     throw error;
