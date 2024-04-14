@@ -39,10 +39,16 @@ function ProjectDetails({}) {
     checkIfCurrentUser();
   }, [project]);
 
-  const handleDelete = async (projectId) => {
-    await deleteProject(projectId);
-    navigate("/feed");
+ 
+  const handleDelete = async () => {
+    try {
+      await deleteProject(projectId);
+      navigate("/feed");
+    } catch (error) {
+      console.error('Failed to delete project:', error);
+    }
   };
+  
 
   return (
     <div className="project-details-wrapper">
