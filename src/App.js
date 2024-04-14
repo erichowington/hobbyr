@@ -81,7 +81,7 @@ function App() {
           <Route path="/favs" element={<Favs />} />
           <Route
             path="/createproject"
-            element={<CreateProject profile={profile} />}
+            element={<CreateProject profile={profile} user={user} />}
           />
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
