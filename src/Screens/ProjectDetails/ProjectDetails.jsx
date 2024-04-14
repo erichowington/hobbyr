@@ -4,7 +4,7 @@ import { getUserProfile } from "../../Services/userProfile.js";
 import { Link, useParams, useNavigate, NavLink } from "react-router-dom";
 import CommentModal from "../../Components/CommentModal/CommentModal.jsx";
 import "./ProjectDetails.css";
-import { verifyUser } from  "../../Services/users.js";
+import { verifyUser } from "../../Services/users.js";
 
 function ProjectDetails({}) {
   const PROJECT_TYPES = [
@@ -25,30 +25,25 @@ function ProjectDetails({}) {
     const oneProject = await getProject(projectId);
     setProject(oneProject);
   };
-  
-
 
   useEffect(() => {
     fetchProject();
   }, [projectId]);
-  
+
   useEffect(() => {
     const checkIfCurrentUser = async () => {
-      const current = await verifyUser()
-      setIsCurrent(current.userProfile.id == project.user_profile)
-    }
+      const current = await verifyUser();
+      setIsCurrent(current.userProfile.id == project.user_profile);
+    };
 
-    checkIfCurrentUser()
+    checkIfCurrentUser();
   }, [project]);
-  
-  
 
   const handleDelete = async (projectId) => {
     await deleteProject(projectId);
     navigate("/feed");
   };
 
-  
   return (
     <div className="project-details-wrapper">
       <div className="details-logo-wrapper">
@@ -56,7 +51,9 @@ function ProjectDetails({}) {
           className="details-logo"
           src="https://github.com/erichowington/hobbyr/blob/dev/public/images/hobbyr-logos/hobbyr-logo-orange.png?raw=true"
         />
-        <Link className="details-header-link" to="/browse">back to browse</Link>
+        <Link className="details-header-link" to="/browse">
+          back to browse
+        </Link>
       </div>
       <div className="project-details">
         <div className="detailContent">
@@ -97,29 +94,26 @@ function ProjectDetails({}) {
           <div className="project-details-link">
             <a
               className="project-link"
-              href={project.link} 
+              href={project.link}
               target="_blank"
               rel="noopener noreferrer"
             >
               Project Link
             </a>
           </div>
-          <div className="my-project-options">{
-            isCurrent && <> <Link to={`/projects/${projectId}/edit`}>
-              
-            <button className="edit-the-project">EDIT</button>
-          </Link>
-          <button className="delete-the-project" onClick={handleDelete}>
-            DELETE
-          </button>
-            </>
-          }
-            
+          <div className="my-project-options">
+            {isCurrent && (
+              <>
+                {" "}
+                <Link to={`/projects/${projectId}/edit`}>
+                  <button className="edit-the-project">EDIT</button>
+                </Link>
+                <button className="delete-the-project" onClick={handleDelete}>
+                  DELETE
+                </button>
+              </>
+            )}
           </div>
-
-          
-
-
         </div>
         <CommentModal projectId={projectId} />
       </div>

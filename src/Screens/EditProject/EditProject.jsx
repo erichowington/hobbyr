@@ -59,21 +59,6 @@ function EditProject() {
     }
   };
 
-  // const handleChange = (e) => {
-  //   const { name, value, files } = e.target;
-  //   if (name === 'project_img') {
-  //     setProject(prevProject => ({
-  //       ...prevProject,
-  //       [name]: files[0]
-  //     }));
-  //   } else {
-  //     setProject(prevProject => ({
-  //       ...prevProject,
-  //       [name]: value
-  //     }));
-  //   }
-  // };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
 
