@@ -37,7 +37,7 @@ function SignIn({ setUser, setProfile }) {
       setForm((prevForm) => ({
         ...prevForm,
         isError: true,
-        errorMsg: "Invalid Credentials",
+        errorMsg: "Try Again",
         password: "",
       }));
     }
@@ -48,7 +48,7 @@ function SignIn({ setUser, setProfile }) {
 
     if (form.isError) {
       return (
-        <button type="submit" className={toggleForm}>
+        <button id="invalid" type="submit" className={toggleForm}>
           {" "}
           {form.errorMsg}
         </button>

@@ -38,7 +38,7 @@
 .signin-password-wrapper{
     padding:1vh 0 1vh 0;
 }
-.signin-button{
+.signin-button, #invalid{
     width:fit-content;
     padding:1vh 3vh;
     margin: 0 auto;

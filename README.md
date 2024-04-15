@@ -11,6 +11,7 @@ In a cluttered landscape of social media platforms, the decision of what and whe
 
 ### Road Map
 
+
 <img src="https://github.com/erichowington/hobbyr/blob/dev/public/images/information-systems/Screenshot%202024-04-14%20at%208.36.59%E2%80%AFPM.png?raw=true" width="750" height="auto">
 
 
@@ -20,7 +21,7 @@ In a cluttered landscape of social media platforms, the decision of what and whe
 
 ### Logic Map
 
-<img src= "https://github.com/erichowington/hobbyr/blob/dev/public/images/information-systems/LOGIC%20MAP.%20%20(1).png?raw=true" width="850" height="auto" > 
+<img src= "https://github.com/erichowington/hobbyr/blob/dev/public/images/information-systems/LOGIC%20MAP.%20%20(1).png?raw=true" width="900" height="auto" > 
 
 
 
@@ -31,7 +32,11 @@ In a cluttered landscape of social media platforms, the decision of what and whe
 fork and clone this repository
 
 ```bash
-~ npx create-react-app .
+~ git clone URL
+```
+and run the line command below to install dependencies
+
+```bash
 ~ npm i 
 ```
 go to [hobbyr API](https://www.github.com/bngoon/hobbyr-backend) for information on using our RESTful API, and checkout or back end interface.
