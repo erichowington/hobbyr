@@ -1,9 +1,11 @@
-import { getUserProfile } from "../../Services/userProfile";
+import { getUserProfile, } from "../../Services/userProfile";
+import { getProjectsByUserProfile } from "../../Services/project.js";
 import { Follow, Unfollow, getFollows } from "../../Services/follow.js";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./UserProfile.css";
 import { Link } from "react-router-dom";
+import Project from "../Project/Project.jsx";
 
 function UserProfile({ myProfile }) {
   const [profile, setProfile] = useState(null);
@@ -14,6 +16,22 @@ function UserProfile({ myProfile }) {
   const [isDropdownOpen, setIsDropDownOpen] = useState(false);
 
   const { profileId } = useParams();
+  const [projects, setProjects] = useState([]);
+
+
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const data = await getProjectsByUserProfile(profileId);
+        setProjects(data);
+      } catch (error) {
+        console.error('Failed to fetch projects:', error);
+      }
+    };
+
+    fetchProjects();
+  }, []);
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -147,6 +165,11 @@ function UserProfile({ myProfile }) {
               </div>
             </div>
           </div>
+        </div>
+        <div className="profile-container-btm">
+        {projects.map((project) => (
+          <Project project ={project}/>
+        ))}
         </div>
       </div>
     </div>

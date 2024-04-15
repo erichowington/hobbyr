@@ -67,3 +67,12 @@ export const getProjectsByFollowedUsers = async () => {
     throw error;
   }
 };
+
+export const getProjectsByUserProfile = async (userProfileId) => {
+  try {
+    const response = await api.get(`/projects/user-profile/${userProfileId}/`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
