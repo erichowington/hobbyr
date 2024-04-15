@@ -11,17 +11,16 @@ In a cluttered landscape of social media platforms, the decision of what and whe
 
 ### Road Map
 
-<img src="https://github.com/erichowington/hobbyr/blob/dev/public/images/information-systems/Screenshot%202024-04-14%20at%208.36.59%E2%80%AFPM.png?raw=true"
-width="750" height="auto">
+<img src="https://github.com/erichowington/hobbyr/blob/dev/public/images/information-systems/Screenshot%202024-04-14%20at%208.36.59%E2%80%AFPM.png?raw=true" width="750" height="auto">
 
 
 ### Wire Frame
 
-<img src="https://github.com/erichowington/hobbyr/blob/dev/public/images/information-systems/hobbyr%20WIREFRAME.png?raw=true width="750" height="auto" >
+<img src="https://github.com/erichowington/hobbyr/blob/dev/public/images/information-systems/hobbyr%20WIREFRAME.png?raw=true" width="750" height="auto" >
 
 ### Logic Map
 
-<img src= "https://github.com/erichowington/hobbyr/blob/dev/public/images/information-systems/LOGIC%20MAP.%20%20(1).png?raw=true" width="750" height="auto" > 
+<img src= "https://github.com/erichowington/hobbyr/blob/dev/public/images/information-systems/LOGIC%20MAP.%20%20(1).png?raw=true" width="850" height="auto" > 
 
 
 
