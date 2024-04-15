@@ -41,9 +41,9 @@ export const updateProject = async (id, projectData) => {
   }
 };
 
-export const deleteProject = async (id, projectData) => {
+export const deleteProject = async (id) => {
   try {
-    const response = await api.delete(`/projects/${id}/`, projectData);
+    const response = await api.delete(`/projects/${id}/`);
     return response.data;
   } catch (error) {
     throw error;
