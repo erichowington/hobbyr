@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# hobbyr
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="https://github.com/erichowington/hobbyr/blob/dev/public/images/hobbyr-logos/hobbyr-logo-blue.png?raw=true" width="500" height="auto">
 
-## Available Scripts
+Welcome to the hobbyr repository!
 
-In the project directory, you can run:
+### Overview
+In a cluttered landscape of social media platforms, the decision of what and where to post can feel overwhelming. Whether you're an influencer shaping your online persona, a creative expressing your unique vision, or a streamer seeking to connect with your audience, maintaining consistency across platforms can be a daunting challenge. Enter hobbyr, your trusted ally in the digital realm. Our goal is simple: to provide an effortless user experience that stays true to your leisure pursuits, your passions. With hobbyr, users can effortlessly share their latest projects, engage with like-minded individuals, and draw inspiration from a diverse community of enthusiasts. Let hobbyr be your canvas for self-expression and discovery, where your hobbies come to life in vibrant, interconnected ways.
 
-### `npm start`
+<img src="https://github.com/erichowington/hobbyr/blob/dev/public/images/information-systems/untitled%20(1).png?raw=true" width="750" height auto>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Road Map
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img src="https://github.com/erichowington/hobbyr/blob/dev/public/images/information-systems/Screenshot%202024-04-14%20at%208.36.59%E2%80%AFPM.png?raw=true"
+width="750" height="auto">
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Wire Frame
 
-### `npm run build`
+<img src="https://github.com/erichowington/hobbyr/blob/dev/public/images/information-systems/hobbyr%20WIREFRAME.png?raw=true width="750" height="auto" >
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Logic Map
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img src= "https://github.com/erichowington/hobbyr/blob/dev/public/images/information-systems/LOGIC%20MAP.%20%20(1).png?raw=true" width="750" height="auto" > 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+fork and clone this repository
 
-## Learn More
+```bash
+~ npx create-react-app .
+~ npm i 
+```
+go to [hobbyr API](https://www.github.com/bngoon/hobbyr-backend) for information on using our RESTful API, and checkout or back end interface.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img src="https://github.com/erichowington/hobbyr/blob/dev/public/images/hobbyr-logos/hobbyr-api.png?raw=true" width="300" height="auto">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Front End:** React, JavaScript
 
-### Analyzing the Bundle Size
+**Back End:** Django, Python, PostgreSQL
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Authors
+- [Eric](https://www.github.com/erichowington)
+- [Booker Ngoon](https://www.github.com/bngoon)
+- [Alex Chkhikvishvili](https://www.github.com/AleksandreChkhikvishvili)
+- [Shatlyk](https://www.github.com/Shatlykch)
+- [Kevin Butler](https://www.github.com/kevinjbutler1994)
