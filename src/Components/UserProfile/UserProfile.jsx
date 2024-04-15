@@ -166,6 +166,7 @@ function UserProfile({ myProfile }) {
           </div>
         </div>
         <div className="profile-container-btm">
+          <div className="btm-header"> My Projects</div>
         {projects.map((project) => (
           <Project project ={project}/>
         ))}
