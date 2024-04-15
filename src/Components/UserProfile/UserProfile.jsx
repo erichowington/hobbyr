@@ -110,8 +110,7 @@ function UserProfile({ myProfile }) {
             <div className="profile-img-wrapper">
               <img
                 className="profile-img"
-                src= {profile.profile_pic}
-                alt="user-icon"
+                src={profile.profile_pic ? profile.profile_pic : "https://github.com/erichowington/hobbyr/blob/dev/public/images/hobbyr-logos/hobbyr-thumbnail-orange.png?raw=true"}
               />
             </div>
             <div>

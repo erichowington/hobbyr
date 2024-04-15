@@ -92,12 +92,12 @@
   overflow-x: hidden;
 }
 .profile-img-wrapper {
-  width: max-content;
+  width: fit-content;
   border-radius: 10vh;
   margin:2vh;
 }
 .profile-img {
-  width: 15vh;
+  width: 10vh;
   padding: 1em 0 0 0;
   
 }

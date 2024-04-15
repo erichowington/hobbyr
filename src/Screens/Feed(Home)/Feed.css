@@ -1,0 +1,26 @@
+.feed-wrapper{
+    width:100vw;
+}
+.feed-header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    
+}
+.feed-header{
+    font-family: "Roboto Mono";
+    margin:0 20vw 0 0;
+    font-weight: 600;
+    background-color:#f89a4d;
+    padding:1vh;
+}
+.feed-content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:2vh 0 2vh 0;
+
+}
