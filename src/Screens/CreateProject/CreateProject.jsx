@@ -37,7 +37,7 @@ function CreateProject({ profile }) {
     formData.append('user_profile', project.user_profile);
     console.log(formData)
     await createProject(project);
-    navigate('/feed');
+    navigate('/');
   };
 
   const handleChange = (e) => {
