@@ -50,7 +50,7 @@ const Browse = () => {
         <img
           className="signin-logo-img"
           src="https://github.com/erichowington/hobbyr/blob/dev/public/images/hobbyr-logos/hobbyr-logo-orange.png?raw=true"
-        />
+          alt="sign in logo"/>
       </div>
       <h1 className="browse-title">Browse</h1>
       <select

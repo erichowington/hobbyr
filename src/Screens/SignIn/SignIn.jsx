@@ -68,7 +68,7 @@ function SignIn({ setUser, setProfile }) {
         <img
           className="signin-logo-img"
           src="https://github.com/erichowington/hobbyr/blob/dev/public/images/hobbyr-logos/hobbyr-logo-orange.png?raw=true"
-        />
+          alt="signin logo"/>
       </div>
       <div className="signin-container">
         <form className="signin-form" onSubmit={handleSubmit}>
