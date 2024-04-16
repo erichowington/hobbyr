@@ -43,7 +43,7 @@ function ProjectDetails({}) {
   const handleDelete = async () => {
     try {
       await deleteProject(projectId);
-      navigate("/feed");
+      navigate("/");
     } catch (error) {
       console.error('Failed to delete project:', error);
     }

@@ -1,50 +1,45 @@
-import React from 'react'
-import { getProjectsByFollowedUsers } from '../../Services/project';
-import { useState, useEffect } from 'react';
-import Project from '../../Components/Project/Project';
-import { useParams, useNavigate } from 'react-router-dom';
-import "./Feed.css"
+import React from "react";
+import { getProjectsByFollowedUsers } from "../../Services/project";
+import { useState, useEffect } from "react";
+import Project from "../../Components/Project/Project";
+import { useParams, useNavigate } from "react-router-dom";
+import "./Feed.css";
 
 function Feed() {
+  const [projects, setProjects] = useState([]);
 
-    const [projects, setProjects] = useState([]);
-  
-    useEffect(() => {
-      const fetchProjects = async () => {
-        try {
-          const data = await getProjectsByFollowedUsers();
-          setProjects(data);
-        } catch (error) {
-          console.error('Failed to fetch projects:', error);
-        }
-      };
-  
-      fetchProjects();
-    }, []);
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const data = await getProjectsByFollowedUsers();
+        setProjects(data);
+      } catch (error) {
+        console.error("Failed to fetch projects:", error);
+      }
+    };
 
+    fetchProjects();
+  }, []);
 
-  
-  
   return (
-    <div>
-   <div className="feed-content">
-        
+    <div className="feed-wrapper">
+      <div className="feed-header-container">
+        <div className="siginin-logo-wrapper">
+          <img
+            className="signin-logo-img"
+            src="https://github.com/erichowington/hobbyr/blob/dev/public/images/hobbyr-logos/hobbyr-logo-orange.png?raw=true"
+          />
+        </div>
+        <div className="feed-header">My Feed</div>
+      </div>
+      <div className="feed-content">
         {projects.map((project) => (
-          <Project key={project.id} project={project} />
-
-          // <div key={project.id} className="browse-project-card">
-          //   <h2 className="browse-project-title">{project.project_title}</h2>
-          //   {project.project_img && <img src={project.project_img} alt={project.project_title} style={{ width: '10em' }} />}
-          //   <p>{project.body}</p>
-          //   {project.link && <a href={project.link} target="_blank" rel="noopener noreferrer">More Info</a>}
-          //   <p>Created on: {new Date(project.created_at).toLocaleDateString()}</p>
-          // </div>
-        ))};
+          <Project classname="feed-image" key={project.id} project={project} />
+        ))}
         
       </div>
-
     </div>
-  )
+  );
 }
 
-export default Feed
+export default Feed;
