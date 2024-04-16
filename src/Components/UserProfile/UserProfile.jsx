@@ -101,7 +101,7 @@ function UserProfile({ myProfile }) {
                     <div className="dropdown-toggle" onClick={toggleDropdown}>
                       <div className="dropdown-container">
                         <div className="icon-container">
-                          <img className="settings-icon" src="https://github.com/erichowington/hobbyr/blob/dev/public/images/hobbyr-icons/setting-icon.png?raw=true"/>
+                          <img className="settings-icon" src="https://github.com/erichowington/hobbyr/blob/dev/public/images/hobbyr-icons/setting-icon.png?raw=true"alt="settings icon"/>
                         </div>
                         {isDropdownOpen && (
                           <div className="dropdown-content">{myOptions}</div>

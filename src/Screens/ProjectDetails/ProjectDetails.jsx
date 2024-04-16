@@ -56,7 +56,7 @@ function ProjectDetails({}) {
         <img
           className="details-logo"
           src="https://github.com/erichowington/hobbyr/blob/dev/public/images/hobbyr-logos/hobbyr-logo-orange.png?raw=true"
-        />
+          alt="detail logo"/>
         <Link className="details-header-link" to="/browse">
           back to browse
         </Link>

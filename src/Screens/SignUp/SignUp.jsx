@@ -64,7 +64,7 @@ function Register({ setUser }) {
         <img
           className="signin-logo-img"
           src="https://github.com/erichowington/hobbyr/blob/dev/public/images/hobbyr-logos/hobbyr-logo-orange.png?raw=true"
-        />
+          alt="signin logo"/>
       </div>
       <div className="signup-container">
         <form className="signup-form" onSubmit={handleSubmit}>
