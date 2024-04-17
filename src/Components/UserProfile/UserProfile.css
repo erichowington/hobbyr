@@ -38,7 +38,7 @@
 .settings-icon{
   width:3vh;
   filter: invert(52%) sepia(1%) saturate(2141%) hue-rotate(321deg) brightness(92%) contrast(83%);
-  margin:1vh 0 0 15vw;
+  margin:1vh 0 0 20vw;
   
 }
 .dropdown-toggle{
@@ -92,12 +92,12 @@
   overflow-x: hidden;
 }
 .profile-img-wrapper {
-  width: max-content;
+  width: fit-content;
   border-radius: 10vh;
   margin:2vh;
 }
 .profile-img {
-  width: 15vh;
+  width: 10vh;
   padding: 1em 0 0 0;
   
 }
@@ -168,4 +168,20 @@
   padding: 7vh 0 0 0;
   display: flex;
   justify-content: center;
+}
+/* Bottom Container*/
+
+.profile-container-btm{
+  width:100vw;
+  display:flex;
+  background-color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btm-header{
+  font-family:"Roboto Mono";
+  font-weight: 600;
+  color:rgb(98, 98, 189);
+  padding: 1vh;
 }
