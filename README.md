@@ -19,6 +19,10 @@ In a cluttered landscape of social media platforms, the decision of what and whe
 
 <img src="https://github.com/erichowington/hobbyr/blob/dev/public/images/information-systems/hobbyr%20WIREFRAME.png?raw=true" width="750" height="auto" >
 
+### Component Hierarchy Map
+
+<img src="https://raw.githubusercontent.com/erichowington/hobbyr/b128e2fc45d0b84d8c37bb02671ec485bf7b66bd/public/images/information-systems/hobbyr-CHM.png" width="750" height="auto">
+
 ### Logic Map
 
 <img src= "https://github.com/erichowington/hobbyr/blob/dev/public/images/information-systems/LOGIC%20MAP.%20%20(1).png?raw=true" width="900" height="auto" > 
